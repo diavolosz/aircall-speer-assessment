@@ -1,0 +1,36 @@
+.top-nav-container {
+  width: 90%;
+  height: 5%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 5%;
+  position: sticky;
+}
+
+.top-nav-activity {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.top-nav-activity svg {
+  width: 2.5em;
+  margin-right: 0.5em;
+}
+.top-nav-activity p {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.top-nav-item {
+  font-size: 12px;
+  font-weight: 600;
+  font-family: 'Montserrat', sans-serif;;
+  color: grey;
+}
+
+.top-nav-archive-icon {
+  font-size: 20px;
+}
