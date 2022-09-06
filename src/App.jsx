@@ -1,7 +1,12 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 
-import Header from './Header.jsx';
+import Header from './components/Header.jsx';
+import TopNav from './components/TopNav.jsx';
+import ArchieveButton from './components/ArchieveButton.jsx';
+import CallsDisplayList from './components/CallsDisplayList.jsx';
+import BottomNav from './components/BottomNav.jsx';
+
 
 const App = () => {
   return (
