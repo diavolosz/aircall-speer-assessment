@@ -1,8 +1,29 @@
-import React from 'react';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faBoxArchive } from '@fortawesome/free-solid-svg-icons'
+import React, { useState } from 'react';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faBoxArchive } from '@fortawesome/free-solid-svg-icons';
 
 const TopNav = () => {
+
+  const [inbox, setInbox] = useState('underline')
+  const [call, setCall] = useState(null)
+  const [archive, setArchive] = useState('underline')
+
+  const handleInboxHighlight = () => {
+    setInbox('underline')
+    setCall(null)
+    setArchive(null)
+  }
+  const handleCallHighlight = () => {
+    setInbox(null)
+    setCall('underline')
+    setArchive(null)
+  }
+  const handleArchiveHighlight = () => {
+    setInbox(null)
+    setCall(null)
+    setArchive('selected-icon')
+  }
+
   return (
     <div className='top-nav-container'>
 
@@ -15,10 +36,10 @@ const TopNav = () => {
         <p>Activity</p>
       </div>
 
-      <p className='top-nav-item'>Inbox</p>
-      <p className='top-nav-item'>All calls</p>
+      <p className={`top-nav-item ${inbox}`} onClick={() => handleInboxHighlight()}>Inbox</p>
+      <p className={`top-nav-item ${call}`} onClick={() => handleCallHighlight()}>All calls</p>
 
-      <FontAwesomeIcon className='top-nav-archive-icon' icon={faBoxArchive}/>
+      <FontAwesomeIcon className={`top-nav-archive-icon ${archive}`} onClick={() => handleArchiveHighlight()} icon={faBoxArchive} />
 
     </div>
   )
