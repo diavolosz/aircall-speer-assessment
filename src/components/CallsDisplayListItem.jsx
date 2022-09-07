@@ -15,9 +15,6 @@ const CallsDisplayListItem = (props) => {
   return (
     <div className='display-item-container'>
 
-      {/* <span>DURATION: {duration}</span>
-      <span>ARCHIVED: {archived.toString()}</span> */}
-
       <div className='date-container'>
         <span className='dot'>· · · · · · · · · · · · · ·</span>
         <span>{formatDate(new Date(createdTime))}</span>

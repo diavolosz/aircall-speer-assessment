@@ -1,5 +1,7 @@
 
 .display-list-container {
-  margin-top: 1em;
+  /* margin-top: 1em; */
+  position: relative;
+  z-index: 4;
   background-color: var(--background-primary);
 }

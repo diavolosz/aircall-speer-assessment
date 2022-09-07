@@ -8,6 +8,8 @@ import CallsDisplayListItem from './CallsDisplayListItem.jsx'
 
 const CallsDisplayList = (props) => {
 
+  const { content } = props
+
   const [callsData, setCallsData] = useState()
   useEffect(() => {
     axios.get(`https://aircall-job.herokuapp.com/activities`)
@@ -20,7 +22,7 @@ const CallsDisplayList = (props) => {
 
   return (
     <div className='display-list-container'>
-      {callsData && 
+      {content === 'calls' && callsData &&
         callsData.map((call, index) => {
           return (
             <CallsDisplayListItem
@@ -35,6 +37,46 @@ const CallsDisplayList = (props) => {
               archived={call.is_archived}
             />
           )
+        })
+      }
+
+      {content === 'archive' && callsData &&
+        callsData.map((call, index) => {
+          if (call.is_archived) {
+            return (
+              <CallsDisplayListItem
+                key={index}
+                createdTime={call.created_at}
+                from={call.from}
+                to={call.to}
+                via={call.via}
+                duration={call.duration}
+                type={call.call_type}
+                direction={call.direction}
+                archived={call.is_archived}
+              />
+            )
+          }
+        })
+      }
+
+      {content === 'inbox' && callsData &&
+        callsData.map((call, index) => {
+          if (!call.is_archived) {
+            return (
+              <CallsDisplayListItem
+                key={index}
+                createdTime={call.created_at}
+                from={call.from}
+                to={call.to}
+                via={call.via}
+                duration={call.duration}
+                type={call.call_type}
+                direction={call.direction}
+                archived={call.is_archived}
+              />
+            )
+          }
         })
       }
     </div>
