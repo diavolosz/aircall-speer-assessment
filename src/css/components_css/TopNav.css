@@ -6,9 +6,6 @@
   justify-content: space-between;
   align-items: center;
   padding: 2.5% 5%;
-  position: sticky;
-  z-index: 1;
-  top: 80px;
   background-color: white;
 }
 
@@ -52,6 +49,8 @@
 }
 
 .underline {
+  position: relative;
+  z-index: 1;
   top: 2px;
   color: black;
   transition: 0.8s;
@@ -68,6 +67,15 @@
   background-color: var(--secondary-color);
 
   animation: underlineExpand 0.25s;
+}
+.underline::before {
+  content: "";
+  background-color: red;
+  position: absolute;
+  z-index: -1;
+  display: block;
+  width: 10px;
+  height: 10px;
 }
 
 

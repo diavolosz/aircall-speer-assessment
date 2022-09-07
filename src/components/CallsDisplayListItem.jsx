@@ -19,7 +19,9 @@ const CallsDisplayListItem = (props) => {
       <span>ARCHIVED: {archived.toString()}</span> */}
 
       <div className='date-container'>
+        <span className='dot'>· · · · · · · · · · · · · ·</span>
         <span>{formatDate(new Date(createdTime))}</span>
+        <span className='dot'>· · · · · · · · · · · · · ·</span>
       </div>
 
       <div className='call-info-container'>
@@ -34,23 +36,10 @@ const CallsDisplayListItem = (props) => {
             <div className='call-source'>{from}</div>
             <div className='call-action'>{generateMissedDescription(type, to, via)}</div>
           </div>
-
-          {/* {type === 'answered' &&
-            <div className='call-person-info'>
-              <div className='call-source'>{from}</div>
-              <div className='call-action'>called {to} on {via}</div>
-            </div>
-          }
-          {type === 'voicemail' &&
-            <div className='call-person-info'>
-              <div className='call-source'>{from}</div>
-              <div className='call-action'>left a voicemail {to? `for ${to}` : `for unknown`} on {via}</div>
-            </div>
-          } */}
         </div>
 
         <div className='separator'>
-          ...
+          <span>· · ·</span>
         </div>
 
         <div className='call-time'>

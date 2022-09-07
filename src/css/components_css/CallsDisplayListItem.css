@@ -7,30 +7,29 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
+  justify-content: space-evenly;
   height: 90px;
-  margin: 0.5em 0;
-
-  background-image: linear-gradient(to right, rgb(0, 0, 0) 10%, rgba(255, 255, 255, 0) 0%);
-  background-position: top;
-  background-size: 5px 1px;
-  background-repeat: repeat-x;
-  /* background-color: #FDFDFC; */
 }
 
 .date-container {
   display: flex;
   flex-direction: row;
-  justify-content: space-evenly;
+  justify-content: space-between;
   align-items: center;
   position: relative;
-  top: -19%;
-  width: 35%;
+  width: 100%;
   background-color: var(--background-primary);;
-  color: grey;
+  color: var(--text-secondary);
   font-weight: bold;
   font-size: 10px;
-  letter-spacing: 2px;
+  letter-spacing: 2px;  
+  margin-bottom: 0.5em;
+
+}
+
+.date-container .dot {
+  font-size: 7px;
+  color: var(--text-secondary);
 }
 
 .call-info-container {
@@ -73,14 +72,22 @@
   font-size: 15px;
 }
 .call-person-info .call-action {
-  color: grey;
+  color: var(--text-secondary);
   font-size: 12px;
 }
 
 
 .separator {
-  width: 5%;
+  width: 8%;
+  transform: rotate(90deg);
+  color: var(--text-secondary);
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .call-time {
   width: 20%;
+  color: var(--text-secondary);
+  font-size: 12px;
+  font-weight: 600;
 }
