@@ -1,8 +1,10 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState, useMemo } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBoxArchive } from '@fortawesome/free-solid-svg-icons';
 
 const TopNav = (props) => {
+
+  const { content } = props
 
   const [inbox, setInbox] = useState('underline')
   const [call, setCall] = useState(null)
@@ -26,6 +28,23 @@ const TopNav = (props) => {
     setCall(null)
     setArchive('selected-icon')
   }
+
+  useMemo(() => {
+    if (content === 'inbox') {
+      setInbox('underline')
+      setCall(null)
+      setArchive(null)
+    } else if (content === 'calls') {
+      setInbox(null)
+      setCall('underline')
+      setArchive(null)
+    } else if (content === 'archive'){
+      setInbox(null)
+      setCall(null)
+      setArchive('selected-icon')
+    }
+  }, [content])
+
 
   return (
     <div className='top-nav-container'>

@@ -1,0 +1,97 @@
+
+.call-details-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100%;
+  padding: 1em;
+  font-weight: 600;
+}
+
+.call-thumbnail {
+  margin: 2em 0 1em 0;
+  height: 100px;
+  width: 100px;
+  object-fit: contain;
+  background-color: white;
+  border: 2px solid var(--text-secondary);
+  border-radius: 50%;
+}
+
+.call-from {
+  font-size: 20px;
+  color: var(--text-primary);
+}
+
+.description-box {
+  height: fit-content;
+  width: 85%;
+  padding: 1em 2em;
+  margin: 1em;
+  background-color: white;
+  border: 1px solid var(--text-secondary);
+  border-radius: 12px;
+}
+
+.call-description {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 0.5em;
+}
+
+.call-date-container .date{
+  font-size: 12px;
+  font-weight: bold;
+  letter-spacing: 2px;
+  color: var(--text-primary);
+}
+
+.time-descrption {
+  display: flex;
+  justify-content: space-between;
+}
+.time-descrption .time{
+  width: 25%;
+  font-weight: bold;
+  color: var(--text-secondary);
+}
+.time-descrption .description{
+  width: 60%;
+  color: var(--text-primary);
+}
+.time-descrption .duration{
+  width: 15%;
+  color: var(--text-primary);
+  font-size: 10px;
+  text-align: end;
+}
+
+
+
+.archive-button-container{
+  height: fit-content;
+  width: 40%;
+  padding: 0.5em 1em;
+  margin: 1em;
+  background-color: white;
+  border: 1px solid var(--text-secondary);
+  border-radius: 12px;
+  transition: 0.25s;
+}
+
+.archive-button-container:hover {
+  background-color: var(--secondary-color);
+  color: white;
+  transition: 0.25s;
+  cursor: pointer;
+}
+
+.archive-button {
+  display: flex;
+  justify-content: center;
+}
+
+.archive-button span {
+  margin-right:1em;
+}

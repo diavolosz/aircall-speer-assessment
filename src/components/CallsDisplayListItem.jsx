@@ -6,14 +6,16 @@ import formatAMPM from '../helpers/formatAmPm.js'
 import outbound from '../../public/img/outbound.png'
 import inbound from '../../public/img/inbound.png'
 
-import generateMissedDescription from '../helpers/generateMissedDescription.js'
+import generateCallDescription from '../helpers/generateCallDescription.js'
 
 const CallsDisplayListItem = (props) => {
 
-  const { createdTime, from, to, via, duration, type, direction, archived } = props
+  const { handleCallSelection } = props
+
+  const { id, createdTime, from, to, via, duration, type, direction, archived } = props
 
   return (
-    <div className='display-item-container'>
+    <div className='display-item-container' onClick={() => handleCallSelection(id)}>
 
       <div className='date-container'>
         <span className='dot'>· · · · · · · · · · · · · ·</span>
@@ -31,7 +33,7 @@ const CallsDisplayListItem = (props) => {
         <div className='call-person-info-container'>
           <div className='call-person-info'>
             <div className='call-source'>{from}</div>
-            <div className='call-action'>{generateMissedDescription(type, to, via)}</div>
+            <div className='call-action'>{generateCallDescription(from, type, to, via)}</div>
           </div>
         </div>
 

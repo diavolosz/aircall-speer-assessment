@@ -5,6 +5,7 @@
 :root {
   --secondary-color: #FC5624;
   --background-primary: rgb(246, 246, 246);
+  --text-primary: #494949;
   --text-secondary: rgba(128, 128, 128, 0.788);
 }
 
@@ -29,6 +30,8 @@
   border-radius: 3px;
   box-shadow: 0 0 5px 0 rgba(0, 0, 0, .9);
   overflow-y: scroll;
+  background-color: var(--background-primary);
+
 }
 
 #app .container::-webkit-scrollbar {
@@ -37,5 +40,6 @@
 
 #app .container-view {
   background-color: var(--background-primary);
+  height: fit-content;
 }
 

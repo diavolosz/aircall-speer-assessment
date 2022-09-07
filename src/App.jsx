@@ -15,9 +15,9 @@ const App = () => {
   return (
     <div className='container'>
       <Header />
-      <TopNav setContent={setContent} />
+      <TopNav setContent={setContent} content={content}/>
       <div className="container-view">
-        <CallsDisplayList content={content} />
+        <CallsDisplayList content={content} setContent={setContent}/>
       </div>
     </div>
   );
