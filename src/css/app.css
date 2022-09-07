@@ -1,7 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;400;600;800&display=swap');
 
+
+
 :root {
   --secondary-color: #FC5624;
+  --background-primary: rgb(246, 246, 246);
 }
 
 #app {
@@ -13,6 +16,7 @@
   top: 0;
   right: 0;
   bottom: 0;
+  font-family: 'Montserrat', sans-serif;
 }
 
 #app .container {
@@ -23,9 +27,11 @@
   background: white;
   border-radius: 3px;
   box-shadow: 0 0 5px 0 rgba(0, 0, 0, .9);
+  overflow-y: scroll;
+
 }
 
 #app .container-view {
-  padding: 20px;
+  background-color: var(--background-primary);
 }
 

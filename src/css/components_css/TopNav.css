@@ -7,6 +7,9 @@
   align-items: center;
   padding: 2.5% 5%;
   position: sticky;
+  z-index: 1;
+  top: 80px;
+  background-color: white;
 }
 
 .top-nav-activity {
@@ -29,7 +32,6 @@
   text-align: center;
   font-size: 12px;
   font-weight: 600;
-  font-family: 'Montserrat', sans-serif;;
   color: grey;
   position: relative;
 }

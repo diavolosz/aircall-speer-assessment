@@ -1,19 +1,23 @@
-import React from 'react';
+import  React, { useState } from 'react';
 import ReactDOM from 'react-dom';
 
 import Header from './components/Header.jsx';
 import TopNav from './components/TopNav.jsx';
-import ArchieveButton from './components/ArchieveButton.jsx';
-import CallsDisplayList from './components/CallsDisplayList.jsx';
+import ArchieveAllCallsButton from './components/ArchieveAllCallsButton.jsx';
+import CallsDisplayList from './components/CallsDisplayList.jsx'
 import BottomNav from './components/BottomNav.jsx';
 
 
 const App = () => {
+
+  const [content, setContent] = useState('inbox')
+
   return (
     <div className='container'>
       <Header />
-      <TopNav />
-      <div className="container-view">Some activities should be here
+      <TopNav setContent={setContent} />
+      <div className="container-view">
+        <CallsDisplayList content={content} />
       </div>
     </div>
   );

@@ -1,0 +1,86 @@
+
+.display-item-outer-wrapper {
+  margin-top: 1em;
+}
+
+.display-item-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 90px;
+  margin: 0.5em 0;
+
+  background-image: linear-gradient(to right, rgb(0, 0, 0) 10%, rgba(255, 255, 255, 0) 0%);
+  background-position: top;
+  background-size: 5px 1px;
+  background-repeat: repeat-x;
+  /* background-color: #FDFDFC; */
+}
+
+.date-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  position: relative;
+  top: -19%;
+  width: 35%;
+  background-color: var(--background-primary);;
+  color: grey;
+  font-weight: bold;
+  font-size: 10px;
+  letter-spacing: 2px;
+}
+
+.call-info-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  margin: 0 1em;
+  height: 60%;
+  width: 90%;
+  border: 1px solid rgba(128, 128, 128, 0.39);
+  border-radius: 12px;
+  background-color: white;
+}
+
+.call-direction {
+  display: flex;
+  justify-content: center;
+  width: 15%;
+}
+
+.call-direction img {
+  height: 20px;
+}
+
+.call-person-info-container {
+  height: 75%;
+  width: 60%;
+}
+
+.call-person-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  height: 100%;
+  font-weight: 600;
+}
+
+.call-person-info .call-source {
+  color: #494949;
+  font-size: 15px;
+}
+.call-person-info .call-action {
+  color: grey;
+  font-size: 12px;
+}
+
+
+.separator {
+  width: 5%;
+}
+.call-time {
+  width: 20%;
+}

@@ -2,23 +2,26 @@ import React, { useState } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBoxArchive } from '@fortawesome/free-solid-svg-icons';
 
-const TopNav = () => {
+const TopNav = (props) => {
 
   const [inbox, setInbox] = useState('underline')
   const [call, setCall] = useState(null)
-  const [archive, setArchive] = useState('underline')
+  const [archive, setArchive] = useState(null)
 
   const handleInboxHighlight = () => {
+    props.setContent('inbox')
     setInbox('underline')
     setCall(null)
     setArchive(null)
   }
   const handleCallHighlight = () => {
+    props.setContent('calls')
     setInbox(null)
     setCall('underline')
     setArchive(null)
   }
   const handleArchiveHighlight = () => {
+    props.setContent('archive')
     setInbox(null)
     setCall(null)
     setArchive('selected-icon')
