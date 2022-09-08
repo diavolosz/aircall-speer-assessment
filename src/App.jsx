@@ -1,4 +1,4 @@
-import  React, { useState } from 'react';
+import React, { useState } from 'react';
 import ReactDOM from 'react-dom';
 
 import Header from './components/Header.jsx';
@@ -15,9 +15,9 @@ const App = () => {
   return (
     <div className='container'>
       <Header />
-      <TopNav setContent={setContent} content={content}/>
+      <TopNav setContent={setContent} content={content} />
       <div className="container-view">
-        <CallsDisplayList content={content} setContent={setContent}/>
+        <CallsDisplayList content={content} setContent={setContent} />
       </div>
     </div>
   );

@@ -18,20 +18,16 @@ const CallDetails = (props) => {
 
   const handleArchive = (archiveStatus) => {
     if (archiveStatus === false) {
-      console.log('can be archived !')
-      axios.post(`https://aircall-job.herokuapp.com/activities/${id}`, { is_archived: !archiveStatus })
+      axios.post(`https://aircall-job.herokuapp.com/activities/${id}`, { is_archived: true })
         .then(() => {
-          console.log('is now archived')
           setContent('archive')
         })
         .catch((err) => {
           console.log(err)
         })
     } else {
-      console.log('can be Unarchived !')
-      axios.post(`https://aircall-job.herokuapp.com/activities/${id}`, { is_archived: !archiveStatus })
+      axios.post(`https://aircall-job.herokuapp.com/activities/${id}`, { is_archived: false })
         .then(() => {
-          console.log('is now Unarchived')
           setContent('calls')
         })
         .catch((err) => {

@@ -1,0 +1,37 @@
+.archive-all-calls-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  height: 90px;
+  position: relative;
+  z-index: 4;
+  font-weight: 600;
+}
+
+.archive-all-buttons {
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  margin: 0 1em;
+  padding: 1em 2em;
+  height: 30%;
+  width: 75%;
+  border: 1px solid rgba(128, 128, 128, 0.39);
+  border-radius: 12px;
+  background-color: white;
+  color: var(--text-primary);
+  transition: 0.25s;
+}
+
+.archive-all-buttons:hover {
+  background-color: var(--secondary-color);
+  color: white;
+  transition: 0.25s;
+  cursor: pointer;
+}
+
+.archive-all-buttons .icon {
+  font-size: 22px;
+  margin-right: 1em;
+}

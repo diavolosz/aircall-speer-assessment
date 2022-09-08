@@ -4,7 +4,7 @@ import '../css/components_css/CallsDisplayList.css'
 
 import CallsDisplayListItem from './CallsDisplayListItem.jsx'
 import CallDetails from './CallDetails.jsx';
-
+import ArchieveAllCallsButton from './ArchieveAllCallsButton.jsx'
 
 const CallsDisplayList = (props) => {
 
@@ -40,6 +40,8 @@ const CallsDisplayList = (props) => {
 
   return (
     <div className='display-list-container'>
+      {content === 'inbox' && <ArchieveAllCallsButton setContent={setContent} content={content} callsData={callsData}/>}
+      {content === 'calls' && <ArchieveAllCallsButton setContent={setContent} content={content} callsData={callsData}/>}
 
       {content === 'callDisplay' && callDisplayDetails &&
         <CallDetails
@@ -102,7 +104,7 @@ const CallsDisplayList = (props) => {
 
       {content === 'inbox' && callsData &&
         callsData.map((call, index) => {
-          if (call.direction === 'inbound') {
+          if (call.direction === 'inbound' && call.is_archived === false) {
             return (
               <CallsDisplayListItem
                 key={index}
