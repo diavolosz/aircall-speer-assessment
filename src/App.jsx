@@ -5,7 +5,9 @@ import Header from './components/Header.jsx';
 import TopNav from './components/TopNav.jsx';
 import CallsDisplayList from './components/CallsDisplayList.jsx'
 import BottomNav from './components/BottomNav.jsx';
-
+import DialPad from './components/DialPad.jsx';
+import Contact from './components/Contact.jsx';
+import Setting from './components/Setting.jsx';
 
 const App = () => {
 
@@ -19,6 +21,10 @@ const App = () => {
         <TopNav setContent={setContent} content={content} />
         <div className="container-view">
           <CallsDisplayList content={content} setContent={setContent} />
+          {content === 'dialPad' && <DialPad />}
+          {content === 'contact' && <Contact />}
+          {content === 'setting' && <Setting />}
+
         </div>
       </div>
 

@@ -47,6 +47,8 @@
 
 #app .bottom-nav-wrapper {
   height: 10%;
+  display: flex;
+  justify-content: center;
 }
 
 

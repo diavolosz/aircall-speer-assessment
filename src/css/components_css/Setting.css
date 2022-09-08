@@ -1,0 +1,10 @@
+.setting-page-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 450px;
+  width: 100%;
+  font-weight: 600;
+
+  animation: fadeInFromBot 0.25s;
+}
