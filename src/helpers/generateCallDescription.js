@@ -6,25 +6,25 @@ export default function generateMissedDescription(from, type, to, via, controlle
 
   if (!controlled) {
     if (type === 'missed') {
-      output = `Missed Call: ${from} tried to call ${to} on ${via}`
+      output = `Missed Call: ${from} tried to call ${to} through ${via}`
     } else if (type === 'answered') {
-      output = `Answered: ${from} called ${to} on ${via}`
+      output = `Answered: ${from} called ${to} through ${via}`
     } else if (type === 'voicemail') {
       to ?
-        output = `Missed Call: ${from} left ${to} a voicemail on ${via}`
+        output = `Missed Call: ${from} left ${to} a voicemail through ${via}`
         :
-        output = `Missed Call: Someone left a voicemail on ${via}`
+        output = `Missed Call: ${from} left a voicemail through ${via}`
     }
   } else {
     if (type === 'missed') {
-      output = `tried to call ${to} on ${via}`
+      output = `tried to call ${to} through ${via}`
     } else if (type === 'answered') {
-      output = `called ${to} on ${via}`
+      output = `called ${to} through ${via}`
     } else if (type === 'voicemail') {
       to ?
-        output = `left ${to} a voicemail on ${via}`
+        output = `left ${to} a voicemail through ${via}`
         :
-        output = `left a voicemail on ${via}`
+        output = `left a voicemail through ${via}`
     }
   }
 

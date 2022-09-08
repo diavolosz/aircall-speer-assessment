@@ -14,11 +14,19 @@ const App = () => {
 
   return (
     <div className='container'>
-      <Header />
-      <TopNav setContent={setContent} content={content} />
-      <div className="container-view">
-        <CallsDisplayList content={content} setContent={setContent} />
+
+      <div className='container-view-wrapper'>
+        <Header />
+        <TopNav setContent={setContent} content={content} />
+        <div className="container-view">
+          <CallsDisplayList content={content} setContent={setContent} />
+        </div>
       </div>
+
+      <div className='bottom-nav-wrapper'>
+        <BottomNav />
+      </div>
+      
     </div>
   );
 };
