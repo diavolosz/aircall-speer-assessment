@@ -10,6 +10,18 @@ const TopNav = (props) => {
   const [call, setCall] = useState(null)
   const [archive, setArchive] = useState(null)
 
+
+  //checks if the current content display item is a bottom display, else remove highlight
+  useEffect(() => {
+    if (content !== 'inbox') {
+      setInbox(null)
+    } 
+    if (content !== 'calls') {
+      setCall(null)
+    } 
+  }, [content])
+
+  //handle selective highlight for each item selected 
   const handleInboxHighlight = () => {
     props.setContent('inbox')
     setInbox('underline')
@@ -38,7 +50,7 @@ const TopNav = (props) => {
       setInbox(null)
       setCall('underline')
       setArchive(null)
-    } else if (content === 'archive'){
+    } else if (content === 'archive') {
       setInbox(null)
       setCall(null)
       setArchive('selected-icon')

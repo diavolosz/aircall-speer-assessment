@@ -3,6 +3,7 @@
   margin-top: 1em;
 }
 
+
 .display-item-container {
   display: flex;
   flex-direction: column;
@@ -42,6 +43,9 @@
   border: 1px solid rgba(128, 128, 128, 0.39);
   border-radius: 12px;
   background-color: white;
+
+  animation: blurToClear 0.5s;
+
 }
 
 .call-info-container:hover {
@@ -97,4 +101,13 @@
   color: var(--text-secondary);
   font-size: 12px;
   font-weight: 600;
+}
+
+@keyframes blurToClear {
+  from {
+    filter: blur(5px);
+  }
+  to {
+    filter: blur(0px);
+  }
 }

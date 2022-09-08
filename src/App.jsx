@@ -3,7 +3,6 @@ import ReactDOM from 'react-dom';
 
 import Header from './components/Header.jsx';
 import TopNav from './components/TopNav.jsx';
-import ArchieveAllCallsButton from './components/ArchieveAllCallsButton.jsx';
 import CallsDisplayList from './components/CallsDisplayList.jsx'
 import BottomNav from './components/BottomNav.jsx';
 
@@ -24,7 +23,7 @@ const App = () => {
       </div>
 
       <div className='bottom-nav-wrapper'>
-        <BottomNav />
+        <BottomNav setContent={setContent} content={content}/>
       </div>
       
     </div>

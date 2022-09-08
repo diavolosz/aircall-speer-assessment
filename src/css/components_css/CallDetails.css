@@ -6,6 +6,8 @@
   height: 100%;
   padding: 1em;
   font-weight: 600;
+
+  animation: fadeInFromBot 0.5s;
 }
 
 .call-thumbnail {
@@ -94,4 +96,17 @@
 
 .archive-button span {
   margin-right:1em;
+}
+
+
+
+@keyframes fadeInFromBot {
+  from {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  to {
+    opacity: 1;
+    transform: rotateX(0);
+  }
 }
